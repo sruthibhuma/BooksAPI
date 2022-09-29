@@ -1,0 +1,96 @@
+2022-09-29 16:40:14.9471|DEBUG|BooksAPI.Program|Inside Main method
+2022-09-29 16:40:17.8453|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting
+2022-09-29 16:40:18.1250|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2022-09-29 16:40:22.5585|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework.
+2022-09-29 16:40:23.9760|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2022-09-29 16:40:24.1903|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Book>()
+    .Any()'
+2022-09-29 16:40:24.6829|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            SELECT 1
+            FROM Books AS b)), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+    BooksAPI.Data.AppDbContext, 
+    False, 
+    False, 
+    True
+)
+    .Single()'
+2022-09-29 16:40:24.8237|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2022-09-29 16:40:25.0417|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (208ms).
+2022-09-29 16:40:25.0631|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Books' on server 'localhost\SQLEXPRESS'.
+2022-09-29 16:40:26.0432|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Books' on server 'localhost\SQLEXPRESS'.
+2022-09-29 16:40:26.0602|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Books] AS [b]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2022-09-29 16:40:26.1518|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (81ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Books] AS [b]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2022-09-29 16:40:26.1830|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2022-09-29 16:40:26.1830|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Books' on server 'localhost\SQLEXPRESS'.
+2022-09-29 16:40:26.2092|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Books' on server 'localhost\SQLEXPRESS'.
+2022-09-29 16:40:26.2156|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'AppDbContext' disposed.
+2022-09-29 16:40:26.4227|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: 91CC4826DAFF9D9C5D14704EA6F5008145930284)
+2022-09-29 16:40:26.5051|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7232
+2022-09-29 16:40:26.5051|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5189
+2022-09-29 16:40:26.5051|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly BooksAPI
+2022-09-29 16:40:26.5209|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-09-29 16:40:26.5209|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-09-29 16:40:26.5301|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BooksAPI
+2022-09-29 16:40:26.5301|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started
+2022-09-29 16:40:26.8059|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q459" accepted.
+2022-09-29 16:40:26.8093|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q459" started.
+2022-09-29 16:40:26.9922|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q45A" accepted.
+2022-09-29 16:40:26.9922|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q45A" started.
+2022-09-29 16:40:27.0054|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML21CR6Q459" received FIN.
+2022-09-29 16:40:27.0183|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML21CR6Q45A" received FIN.
+2022-09-29 16:40:27.0183|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q45B" accepted.
+2022-09-29 16:40:27.0183|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q45B" started.
+2022-09-29 16:40:28.4014|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection.|System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-09-29 16:40:28.4209|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HML21CR6Q45B established using the following protocol: Tls12
+2022-09-29 16:40:28.4014|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection.|System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-09-29 16:40:29.6465|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q45A" stopped.
+2022-09-29 16:40:29.6465|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q459" stopped.
+2022-09-29 16:40:29.6557|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML21CR6Q45A" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-09-29 16:40:29.6557|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML21CR6Q459" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-09-29 16:40:29.6957|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE.
+2022-09-29 16:40:29.7045|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2022-09-29 16:40:29.7045|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" received SETTINGS frame for stream ID 0 with length 24 and flags NONE.
+2022-09-29 16:40:29.7045|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2022-09-29 16:40:29.7045|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2022-09-29 16:40:29.7045|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" received HEADERS frame for stream ID 1 with length 440 and flags END_STREAM, END_HEADERS, PRIORITY.
+2022-09-29 16:40:29.7576|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" received SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2022-09-29 16:40:29.8017|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7232/ - -
+2022-09-29 16:40:29.8017|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed.
+2022-09-29 16:40:29.8017|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2022-09-29 16:40:29.8573|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter
+2022-09-29 16:40:29.9217|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/'
+2022-09-29 16:40:29.9217|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints
+2022-09-29 16:40:29.9462|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" sending HEADERS frame for stream ID 1 with length 45 and flags END_STREAM, END_HEADERS.
+2022-09-29 16:40:29.9615|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7232/ - - - 404 0 - 183.7506ms
+2022-09-29 16:40:30.9003|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML21CR6Q45B" received FIN.
+2022-09-29 16:40:31.0097|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" is closed. The last processed stream ID was 1.
+2022-09-29 16:40:31.3001|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML21CR6Q45B" sending FIN because: "The client closed the connection."
+2022-09-29 16:40:31.3001|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q45B" stopped.

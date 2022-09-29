@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using BooksAPI.Data.Models;
 using BooksAPI.Data;
+using BooksAPI.Data.Services;
+using BooksAPI.Data.Dtos;
 
 namespace BooksAPI.Controllers;
 
@@ -9,60 +11,48 @@ namespace BooksAPI.Controllers;
 public class BooksController : ControllerBase
 {
 
-    private readonly AppDbContext _dbContext;
+    private BooksService _booksService;
+    
+    
+        public BooksController(BooksService booksService)
+        {
+            _booksService = booksService;
+        }
 
-    public BooksController(AppDbContext dbContext)
-    {
-        _dbContext = dbContext;
-    }
-
+   
      [HttpGet("GetAllBooks")]
      public IActionResult GetAllBooks()
      {
-         var allbooks = _dbContext.Books.ToList();
+         
+         var allbooks = _booksService.GetAllBooks();
          return Ok(allbooks);
      }
 
     [HttpGet("GetBookById/{bookId}")]
     public IActionResult GetBookById(int bookId)
     {
-        var book = _dbContext.Books.FirstOrDefault(book => book.Id == bookId);
+        var book = _booksService.GetBookById(bookId);
         return Ok(book);
     }
-
         
     [HttpPost("AddBook")]
-    public  IActionResult AddBook([FromBody] Book book)
+    public  IActionResult AddBook([FromBody] BookDto book)
     {
-        var _book = new Book() { Name = book.Name, Author = book.Author };
-        _dbContext.Books.Add(_book);
-        _dbContext.SaveChanges();
+        _booksService.AddBook(book);
         return Ok();
     }
 
     [HttpPut("UpdateBook/{bookId}")]
-    public  IActionResult UpdateBook(int bookId, [FromBody] Book book)
+    public  IActionResult UpdateBook(int bookId, [FromBody] BookDto book)
     {
-        var _book = _dbContext.Books.FirstOrDefault(b => b.Id == book.Id);
-        if(_book != null){
-            _book.Name = book.Name;
-            _book.Author = book.Author;
-
-            _dbContext.SaveChanges();
-        }
-        
-        return Ok(_book);
+        var updatedBook = _booksService.UpdateBook(bookId, book);
+        return Ok(updatedBook);
     }
 
     [HttpDelete("Delete/{bookId}")]
      public IActionResult Delete(int bookId)
      {
-         var _book = _dbContext.Books.FirstOrDefault(b => b.Id == bookId);
-        if(_book != null){
-            
-            _dbContext.Books.Remove(_book);
-            _dbContext.SaveChanges();
-        }
+        _booksService.Deletebook(bookId);
 
         return Ok();
      }

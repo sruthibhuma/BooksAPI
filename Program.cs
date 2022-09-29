@@ -1,5 +1,4 @@
-using System;
-using Microsoft.Extensions.Configuration;
+using NLog.Web;
 
 namespace BooksAPI
 {
@@ -7,20 +6,26 @@ namespace BooksAPI
     {
         public static void Main(string[] args)
         {
+            var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+
             try
             {
+                logger.Debug("Inside Main method");
                 var configuration = new ConfigurationBuilder()
                                     .AddJsonFile("appSettings.json")
                                     .Build();
 
-                // TODO : Implement loging
-
                 CreateHostBuilder(args).Build().Run();
+            }
+            catch(Exception ex)
+            {
+                logger.Error(ex, "Error in Main Method");
+                throw ex;
             }
 
             finally 
             {
-
+                NLog.LogManager.Shutdown();
             }
         }
 
@@ -28,7 +33,8 @@ namespace BooksAPI
                         Host.CreateDefaultBuilder(args)
                         .ConfigureWebHostDefaults(webBuilder => 
                         {
-                            webBuilder.UseStartup<Startup>();
+                            webBuilder.UseStartup<Startup>()
+                            .UseNLog();
                         });
                         
     }
