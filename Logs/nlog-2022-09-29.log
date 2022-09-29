@@ -1,12 +1,12 @@
-2022-09-29 16:40:14.9471|DEBUG|BooksAPI.Program|Inside Main method
-2022-09-29 16:40:17.8453|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting
-2022-09-29 16:40:18.1250|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
-2022-09-29 16:40:22.5585|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework.
-2022-09-29 16:40:23.9760|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
-2022-09-29 16:40:24.1903|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+2022-09-29 22:50:49.6475|DEBUG|BooksAPI.Program|Inside Main method
+2022-09-29 22:50:49.9597|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting
+2022-09-29 22:50:50.0427|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2022-09-29 22:50:50.3053|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework.
+2022-09-29 22:50:51.3552|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2022-09-29 22:50:51.4681|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
 'DbSet<Book>()
     .Any()'
-2022-09-29 16:40:24.6829|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+2022-09-29 22:50:51.9671|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
 'queryContext => new SingleQueryingEnumerable<bool>(
     (RelationalQueryContext)queryContext, 
     RelationalCommandCache.SelectExpression(
@@ -22,75 +22,209 @@
     True
 )
     .Single()'
-2022-09-29 16:40:24.8237|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
-2022-09-29 16:40:25.0417|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (208ms).
-2022-09-29 16:40:25.0631|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Books' on server 'localhost\SQLEXPRESS'.
-2022-09-29 16:40:26.0432|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Books' on server 'localhost\SQLEXPRESS'.
-2022-09-29 16:40:26.0602|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+2022-09-29 22:50:52.0558|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2022-09-29 22:50:52.1326|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (74ms).
+2022-09-29 22:50:52.1326|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Books' on server 'localhost\SQLEXPRESS'.
+2022-09-29 22:50:52.6821|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Books' on server 'localhost\SQLEXPRESS'.
+2022-09-29 22:50:52.6912|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT CASE
     WHEN EXISTS (
         SELECT 1
         FROM [Books] AS [b]) THEN CAST(1 AS bit)
     ELSE CAST(0 AS bit)
 END
-2022-09-29 16:40:26.1518|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (81ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+2022-09-29 22:50:52.9194|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (210ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT CASE
     WHEN EXISTS (
         SELECT 1
         FROM [Books] AS [b]) THEN CAST(1 AS bit)
     ELSE CAST(0 AS bit)
 END
-2022-09-29 16:40:26.1830|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
-2022-09-29 16:40:26.1830|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Books' on server 'localhost\SQLEXPRESS'.
-2022-09-29 16:40:26.2092|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Books' on server 'localhost\SQLEXPRESS'.
-2022-09-29 16:40:26.2156|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'AppDbContext' disposed.
-2022-09-29 16:40:26.4227|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: 91CC4826DAFF9D9C5D14704EA6F5008145930284)
-2022-09-29 16:40:26.5051|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7232
-2022-09-29 16:40:26.5051|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5189
-2022-09-29 16:40:26.5051|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly BooksAPI
-2022-09-29 16:40:26.5209|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
-2022-09-29 16:40:26.5209|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
-2022-09-29 16:40:26.5301|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BooksAPI
-2022-09-29 16:40:26.5301|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started
-2022-09-29 16:40:26.8059|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q459" accepted.
-2022-09-29 16:40:26.8093|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q459" started.
-2022-09-29 16:40:26.9922|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q45A" accepted.
-2022-09-29 16:40:26.9922|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q45A" started.
-2022-09-29 16:40:27.0054|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML21CR6Q459" received FIN.
-2022-09-29 16:40:27.0183|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML21CR6Q45A" received FIN.
-2022-09-29 16:40:27.0183|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q45B" accepted.
-2022-09-29 16:40:27.0183|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q45B" started.
-2022-09-29 16:40:28.4014|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection.|System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+2022-09-29 22:50:52.9533|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2022-09-29 22:50:52.9570|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Books' on server 'localhost\SQLEXPRESS'.
+2022-09-29 22:50:52.9570|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Books' on server 'localhost\SQLEXPRESS'.
+2022-09-29 22:50:52.9570|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'AppDbContext' disposed.
+2022-09-29 22:50:53.0433|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: 91CC4826DAFF9D9C5D14704EA6F5008145930284)
+2022-09-29 22:50:53.1315|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7232
+2022-09-29 22:50:53.1315|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5189
+2022-09-29 22:50:53.1315|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly BooksAPI
+2022-09-29 22:50:53.1315|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-09-29 22:50:53.1315|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-09-29 22:50:53.1315|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\BooksAPI
+2022-09-29 22:50:53.1315|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started
+2022-09-29 22:51:24.6127|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML27S4HQLR5" accepted.
+2022-09-29 22:51:24.6127|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML27S4HQLR5" started.
+2022-09-29 22:51:24.8168|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML27S4HQLR5" received FIN.
+2022-09-29 22:51:24.8168|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML27S4HQLR6" accepted.
+2022-09-29 22:51:24.8168|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML27S4HQLR6" started.
+2022-09-29 22:51:24.8680|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection.|System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
  ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
    --- End of inner exception stack trace ---
    at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
    at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
-2022-09-29 16:40:28.4209|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HML21CR6Q45B established using the following protocol: Tls12
-2022-09-29 16:40:28.4014|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection.|System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+2022-09-29 22:51:24.8680|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HML27S4HQLR6 established using the following protocol: Tls12
+2022-09-29 22:51:25.0172|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML27S4HQLR5" stopped.
+2022-09-29 22:51:25.0193|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML27S4HQLR5" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-09-29 22:51:25.1469|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE.
+2022-09-29 22:51:25.1469|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2022-09-29 22:51:25.1469|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" received SETTINGS frame for stream ID 0 with length 30 and flags NONE.
+2022-09-29 22:51:25.1469|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2022-09-29 22:51:25.1546|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2022-09-29 22:51:25.1546|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" received HEADERS frame for stream ID 1 with length 459 and flags END_STREAM, END_HEADERS, PRIORITY.
+2022-09-29 22:51:25.3950|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" received SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2022-09-29 22:51:25.4920|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7232/swagger/index.html - -
+2022-09-29 22:51:25.4920|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed.
+2022-09-29 22:51:25.4920|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2022-09-29 22:51:26.0454|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending HEADERS frame for stream ID 1 with length 66 and flags END_HEADERS.
+2022-09-29 22:51:26.0454|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending DATA frame for stream ID 1 with length 4749 and flags NONE.
+2022-09-29 22:51:26.0538|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM.
+2022-09-29 22:51:26.0538|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7232/swagger/index.html - - - 200 - text/html;charset=utf-8 572.4720ms
+2022-09-29 22:51:26.4778|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" received HEADERS frame for stream ID 3 with length 107 and flags END_STREAM, END_HEADERS, PRIORITY.
+2022-09-29 22:51:26.5102|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7232/swagger/swagger-ui.css - -
+2022-09-29 22:51:26.5102|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2022-09-29 22:51:26.6246|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty.
+2022-09-29 22:51:26.6331|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending HEADERS frame for stream ID 3 with length 109 and flags END_HEADERS.
+2022-09-29 22:51:26.6331|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending DATA frame for stream ID 3 with length 16384 and flags NONE.
+2022-09-29 22:51:26.6331|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending DATA frame for stream ID 3 with length 16384 and flags NONE.
+2022-09-29 22:51:26.6331|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending DATA frame for stream ID 3 with length 16384 and flags NONE.
+2022-09-29 22:51:26.6331|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending DATA frame for stream ID 3 with length 16384 and flags NONE.
+2022-09-29 22:51:26.6331|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending DATA frame for stream ID 3 with length 16384 and flags NONE.
+2022-09-29 22:51:26.6331|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending DATA frame for stream ID 3 with length 16384 and flags NONE.
+2022-09-29 22:51:26.6331|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending DATA frame for stream ID 3 with length 16384 and flags NONE.
+2022-09-29 22:51:26.6331|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending DATA frame for stream ID 3 with length 16384 and flags NONE.
+2022-09-29 22:51:26.6453|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending DATA frame for stream ID 3 with length 12560 and flags NONE.
+2022-09-29 22:51:26.6453|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-09-29 22:51:26.6453|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending DATA frame for stream ID 3 with length 0 and flags END_STREAM.
+2022-09-29 22:51:26.6453|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7232/swagger/swagger-ui.css - - - 200 143632 text/css 139.8584ms
+2022-09-29 22:51:26.8390|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" received HEADERS frame for stream ID 5 with length 66 and flags END_STREAM, END_HEADERS, PRIORITY.
+2022-09-29 22:51:26.8390|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7232/swagger/v1/swagger.json - -
+2022-09-29 22:51:26.8390|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2022-09-29 22:51:27.0311|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" received HEADERS frame for stream ID 7 with length 96 and flags END_STREAM, END_HEADERS, PRIORITY.
+2022-09-29 22:51:27.0311|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7232/swagger/favicon-32x32.png - -
+2022-09-29 22:51:27.0311|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2022-09-29 22:51:27.0311|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty.
+2022-09-29 22:51:27.0311|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending HEADERS frame for stream ID 7 with length 41 and flags END_HEADERS.
+2022-09-29 22:51:27.0311|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending DATA frame for stream ID 7 with length 628 and flags NONE.
+2022-09-29 22:51:27.0311|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2022-09-29 22:51:27.0311|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending DATA frame for stream ID 7 with length 0 and flags END_STREAM.
+2022-09-29 22:51:27.0311|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7232/swagger/favicon-32x32.png - - - 200 628 image/png 2.0470ms
+2022-09-29 22:51:27.2268|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending HEADERS frame for stream ID 5 with length 35 and flags END_HEADERS.
+2022-09-29 22:51:27.2268|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending DATA frame for stream ID 5 with length 3299 and flags NONE.
+2022-09-29 22:51:27.2268|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" sending DATA frame for stream ID 5 with length 0 and flags END_STREAM.
+2022-09-29 22:51:27.2268|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7232/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 388.1672ms
+2022-09-29 22:51:37.0424|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML27S4HQLR6" received FIN.
+2022-09-29 22:51:37.0424|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR6" is closed. The last processed stream ID was 7.
+2022-09-29 22:51:37.1192|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML27S4HQLR6" sending FIN because: "The client closed the connection."
+2022-09-29 22:51:37.1192|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML27S4HQLR6" stopped.
+2022-09-29 22:51:40.3099|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML27S4HQLR7" accepted.
+2022-09-29 22:51:40.3099|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML27S4HQLR7" started.
+2022-09-29 22:51:40.3099|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML27S4HQLR7" received FIN.
+2022-09-29 22:51:40.3099|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection.|System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
  ---> System.ComponentModel.Win32Exception (0x80090327): An unknown error occurred while processing the certificate.
    --- End of inner exception stack trace ---
    at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
    at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
-2022-09-29 16:40:29.6465|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q45A" stopped.
-2022-09-29 16:40:29.6465|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q459" stopped.
-2022-09-29 16:40:29.6557|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML21CR6Q45A" sending FIN because: "The Socket transport's send loop completed gracefully."
-2022-09-29 16:40:29.6557|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML21CR6Q459" sending FIN because: "The Socket transport's send loop completed gracefully."
-2022-09-29 16:40:29.6957|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE.
-2022-09-29 16:40:29.7045|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
-2022-09-29 16:40:29.7045|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" received SETTINGS frame for stream ID 0 with length 24 and flags NONE.
-2022-09-29 16:40:29.7045|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK.
-2022-09-29 16:40:29.7045|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
-2022-09-29 16:40:29.7045|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" received HEADERS frame for stream ID 1 with length 440 and flags END_STREAM, END_HEADERS, PRIORITY.
-2022-09-29 16:40:29.7576|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" received SETTINGS frame for stream ID 0 with length 0 and flags ACK.
-2022-09-29 16:40:29.8017|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7232/ - -
-2022-09-29 16:40:29.8017|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed.
-2022-09-29 16:40:29.8017|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
-2022-09-29 16:40:29.8573|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter
-2022-09-29 16:40:29.9217|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/'
-2022-09-29 16:40:29.9217|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints
-2022-09-29 16:40:29.9462|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" sending HEADERS frame for stream ID 1 with length 45 and flags END_STREAM, END_HEADERS.
-2022-09-29 16:40:29.9615|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7232/ - - - 404 0 - 183.7506ms
-2022-09-29 16:40:30.9003|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML21CR6Q45B" received FIN.
-2022-09-29 16:40:31.0097|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML21CR6Q45B" is closed. The last processed stream ID was 1.
-2022-09-29 16:40:31.3001|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML21CR6Q45B" sending FIN because: "The client closed the connection."
-2022-09-29 16:40:31.3001|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML21CR6Q45B" stopped.
+2022-09-29 22:51:40.3099|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML27S4HQLR8" accepted.
+2022-09-29 22:51:40.3099|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML27S4HQLR8" started.
+2022-09-29 22:51:40.3150|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML27S4HQLR7" stopped.
+2022-09-29 22:51:40.3150|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML27S4HQLR7" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-09-29 22:51:40.3595|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HML27S4HQLR8 established using the following protocol: Tls12
+2022-09-29 22:51:40.3595|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR8" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE.
+2022-09-29 22:51:40.3595|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR8" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2022-09-29 22:51:40.3595|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR8" received SETTINGS frame for stream ID 0 with length 30 and flags NONE.
+2022-09-29 22:51:40.3595|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR8" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2022-09-29 22:51:40.3595|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR8" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0.
+2022-09-29 22:51:40.3595|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR8" received HEADERS frame for stream ID 1 with length 351 and flags END_STREAM, END_HEADERS, PRIORITY.
+2022-09-29 22:51:40.3595|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR8" received SETTINGS frame for stream ID 0 with length 0 and flags ACK.
+2022-09-29 22:51:40.3595|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7232/api/Books/GetBookById/2 - -
+2022-09-29 22:51:40.3595|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2022-09-29 22:51:40.3595|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path  does not match the path filter
+2022-09-29 22:51:40.4464|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Books/GetBookById/2'
+2022-09-29 22:51:40.4464|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'BooksAPI.Controllers.BooksController.GetBookById (BooksAPI)' with route pattern 'api/Books/GetBookById/{bookId}' is valid for the request path '/api/Books/GetBookById/2'
+2022-09-29 22:51:40.4464|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'BooksAPI.Controllers.BooksController.GetBookById (BooksAPI)'
+2022-09-29 22:51:40.4691|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'BooksAPI.Controllers.BooksController.GetBookById (BooksAPI)'
+2022-09-29 22:51:40.6736|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetBookById", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookById(Int32) on controller BooksAPI.Controllers.BooksController (BooksAPI).
+2022-09-29 22:51:40.6752|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2022-09-29 22:51:40.6752|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2022-09-29 22:51:40.6752|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2022-09-29 22:51:40.6752|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2022-09-29 22:51:40.6752|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2022-09-29 22:51:40.6752|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller BooksAPI.Controllers.BooksController (BooksAPI)
+2022-09-29 22:51:40.6752|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller BooksAPI.Controllers.BooksController (BooksAPI)
+2022-09-29 22:51:40.7491|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'bookId' of type 'System.Int32' ...
+2022-09-29 22:51:40.7655|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'bookId' of type 'System.Int32' using the name 'bookId' in request data ...
+2022-09-29 22:51:40.8192|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'bookId' of type 'System.Int32'.
+2022-09-29 22:51:40.8192|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'bookId' of type 'System.Int32'.
+2022-09-29 22:51:40.8192|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'bookId' of type 'System.Int32' ...
+2022-09-29 22:51:40.8391|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'bookId' of type 'System.Int32'.
+2022-09-29 22:51:40.8391|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-09-29 22:51:40.8391|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-09-29 22:51:40.8391|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-09-29 22:51:40.8391|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-09-29 22:51:40.8481|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method BooksAPI.Controllers.BooksController.GetBookById (BooksAPI) - Validation state: Valid
+2022-09-29 22:51:40.8481|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method BooksAPI.Controllers.BooksController.GetBookById (BooksAPI) with arguments (2)
+2022-09-29 22:51:40.9544|DEBUG|BooksAPI.Data.Services.BooksService|Getting a book by Id
+2022-09-29 22:51:41.0275|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2022-09-29 22:51:41.1838|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Book>()
+    .FirstOrDefault(book => book.Id == __bookId_0)'
+2022-09-29 22:51:41.9129|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Book>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Book.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Book.Author (string), 1], [Property: Book.Name (string) Required, 2] }
+        SELECT TOP(1) b.Id, b.Author, b.Name
+        FROM Books AS b
+        WHERE b.Id == @__bookId_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Book>, 
+    BooksAPI.Data.AppDbContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()'
+2022-09-29 22:51:41.9344|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2022-09-29 22:51:41.9344|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms).
+2022-09-29 22:51:41.9683|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'Books' on server 'localhost\SQLEXPRESS'.
+2022-09-29 22:51:41.9683|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'Books' on server 'localhost\SQLEXPRESS'.
+2022-09-29 22:51:42.0432|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@__bookId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Author], [b].[Name]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__bookId_0
+2022-09-29 22:51:42.5351|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (564ms) [Parameters=[@__bookId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Author], [b].[Name]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__bookId_0
+2022-09-29 22:51:42.7141|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'AppDbContext' started tracking 'Book' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2022-09-29 22:51:42.7999|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader was disposed.
+2022-09-29 22:51:42.7999|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'Books' on server 'localhost\SQLEXPRESS'.
+2022-09-29 22:51:42.7999|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'Books' on server 'localhost\SQLEXPRESS'.
+2022-09-29 22:51:42.7999|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method BooksAPI.Controllers.BooksController.GetBookById (BooksAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1952.0134ms.
+2022-09-29 22:51:42.7999|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-09-29 22:51:42.7999|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2022-09-29 22:51:42.7999|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-09-29 22:51:42.7999|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2022-09-29 22:51:42.7999|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-09-29 22:51:42.7999|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-09-29 22:51:42.7999|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2022-09-29 22:51:42.7999|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2022-09-29 22:51:42.8178|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation.
+2022-09-29 22:51:42.8178|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2022-09-29 22:51:42.8178|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result.
+2022-09-29 22:51:42.8178|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2022-09-29 22:51:42.8178|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'BooksAPI.Data.Models.Book'.
+2022-09-29 22:51:42.8751|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR8" sending HEADERS frame for stream ID 1 with length 74 and flags END_HEADERS.
+2022-09-29 22:51:42.8751|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR8" sending DATA frame for stream ID 1 with length 58 and flags NONE.
+2022-09-29 22:51:42.8751|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2022-09-29 22:51:42.8751|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-09-29 22:51:42.8751|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2022-09-29 22:51:42.8751|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action BooksAPI.Controllers.BooksController.GetBookById (BooksAPI) in 2199.6308ms
+2022-09-29 22:51:42.8751|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'BooksAPI.Controllers.BooksController.GetBookById (BooksAPI)'
+2022-09-29 22:51:42.8751|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR8" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM.
+2022-09-29 22:51:42.8751|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'AppDbContext' disposed.
+2022-09-29 22:51:42.9188|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7232/api/Books/GetBookById/2 - - - 200 - application/json;+charset=utf-8 2557.9219ms
+2022-09-29 22:51:47.0617|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML27S4HQLR8" received FIN.
+2022-09-29 22:51:47.0617|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HML27S4HQLR8" is closed. The last processed stream ID was 1.
+2022-09-29 22:51:47.0617|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HML27S4HQLR8" sending FIN because: "The client closed the connection."
+2022-09-29 22:51:47.0617|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HML27S4HQLR8" stopped.

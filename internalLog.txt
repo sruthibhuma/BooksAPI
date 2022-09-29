@@ -3,3 +3,84 @@
 2022-09-29 16:40:12.3956 Info Adding target FileTarget(Name=logData)
 2022-09-29 16:40:12.4928 Info Validating config: TargetNames=logData, ConfigItems=15, FilePath=C:\BooksAPI\bin\Debug\net6.0\nlog.config
 2022-09-29 16:40:17.7645 Info Validating config: TargetNames=logData, ConfigItems=15, FilePath=C:\BooksAPI\bin\Debug\net6.0\nlog.config
+2022-09-29 20:06:14.0522 Info Message Template Auto Format enabled
+2022-09-29 20:06:14.0863 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-29 20:06:14.1524 Info Adding target FileTarget(Name=logData)
+2022-09-29 20:06:14.1955 Info Validating config: TargetNames=logData, ConfigItems=15, FilePath=C:\BooksAPI\bin\Debug\net6.0\nlog.config
+2022-09-29 20:06:14.5346 Info Validating config: TargetNames=logData, ConfigItems=15, FilePath=C:\BooksAPI\bin\Debug\net6.0\nlog.config
+2022-09-29 20:51:40.2647 Info Shutdown() called. Logger closing...
+2022-09-29 20:51:40.2911 Info Closing old configuration.
+2022-09-29 20:51:40.3305 Info Logger has been closed down.
+2022-09-29 21:07:02.8045 Info Message Template Auto Format enabled
+2022-09-29 21:07:04.2902 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-29 21:07:04.7896 Info Adding target FileTarget(Name=logData)
+2022-09-29 21:07:05.5476 Info Validating config: TargetNames=logData, ConfigItems=15, FilePath=C:\BooksAPI\bin\Debug\net6.0\nlog.config
+2022-09-29 21:07:19.7781 Info Validating config: TargetNames=logData, ConfigItems=15, FilePath=C:\BooksAPI\bin\Debug\net6.0\nlog.config
+2022-09-29 21:57:11.1944 Info Shutdown() called. Logger closing...
+2022-09-29 21:57:11.2311 Info Closing old configuration.
+2022-09-29 21:57:11.2556 Info Logger has been closed down.
+2022-09-29 22:29:22.9642 Info Message Template Auto Format enabled
+2022-09-29 22:29:22.9791 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-29 22:29:23.0500 Info Adding target FileTarget(Name=logData)
+2022-09-29 22:29:23.0919 Info Validating config: TargetNames=logData, ConfigItems=15, FilePath=C:\BooksAPI\bin\Debug\net6.0\nlog.config
+2022-09-29 22:29:23.7047 Info Shutdown() called. Logger closing...
+2022-09-29 22:29:23.7047 Info Closing old configuration.
+2022-09-29 22:29:23.7441 Info Logger has been closed down.
+2022-09-29 22:29:23.7441 Info AppDomain Shutting down. LogFactory closing...
+2022-09-29 22:29:23.7510 Info LogFactory has been closed.
+2022-09-29 22:29:44.8678 Info Message Template Auto Format enabled
+2022-09-29 22:29:44.8840 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-29 22:29:44.9269 Info Adding target FileTarget(Name=logData)
+2022-09-29 22:29:44.9801 Info Validating config: TargetNames=logData, ConfigItems=15, FilePath=C:\BooksAPI\bin\Debug\net6.0\nlog.config
+2022-09-29 22:29:45.2663 Info Shutdown() called. Logger closing...
+2022-09-29 22:29:45.2663 Info Closing old configuration.
+2022-09-29 22:29:45.2954 Info Logger has been closed down.
+2022-09-29 22:29:45.2954 Info AppDomain Shutting down. LogFactory closing...
+2022-09-29 22:29:45.2954 Info LogFactory has been closed.
+2022-09-29 22:29:55.0330 Info Message Template Auto Format enabled
+2022-09-29 22:29:55.0837 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-29 22:29:55.1943 Info Adding target FileTarget(Name=logData)
+2022-09-29 22:29:55.2724 Info Validating config: TargetNames=logData, ConfigItems=15, FilePath=C:\BooksAPI\bin\Debug\net6.0\nlog.config
+2022-09-29 22:29:55.6503 Info Shutdown() called. Logger closing...
+2022-09-29 22:29:55.6503 Info Closing old configuration.
+2022-09-29 22:29:55.6833 Info Logger has been closed down.
+2022-09-29 22:29:55.6833 Info AppDomain Shutting down. LogFactory closing...
+2022-09-29 22:29:55.6833 Info LogFactory has been closed.
+2022-09-29 22:30:25.1432 Info Message Template Auto Format enabled
+2022-09-29 22:30:25.1613 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-29 22:30:25.2103 Info Adding target FileTarget(Name=logData)
+2022-09-29 22:30:25.2562 Info Validating config: TargetNames=logData, ConfigItems=15, FilePath=C:\BooksAPI\bin\Debug\net6.0\nlog.config
+2022-09-29 22:30:25.5358 Info Shutdown() called. Logger closing...
+2022-09-29 22:30:25.5358 Info Closing old configuration.
+2022-09-29 22:30:25.5638 Info Logger has been closed down.
+2022-09-29 22:30:25.5638 Info AppDomain Shutting down. LogFactory closing...
+2022-09-29 22:30:25.5638 Info LogFactory has been closed.
+2022-09-29 22:36:36.2591 Info Message Template Auto Format enabled
+2022-09-29 22:36:36.2791 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-29 22:36:36.3440 Info Adding target FileTarget(Name=logData)
+2022-09-29 22:36:36.4071 Info Validating config: TargetNames=logData, ConfigItems=15, FilePath=C:\BooksAPI\bin\Debug\net6.0\nlog.config
+2022-09-29 22:36:36.6990 Info Shutdown() called. Logger closing...
+2022-09-29 22:36:36.6990 Info Closing old configuration.
+2022-09-29 22:36:36.7299 Info Logger has been closed down.
+2022-09-29 22:36:36.7299 Info AppDomain Shutting down. LogFactory closing...
+2022-09-29 22:36:36.7354 Info LogFactory has been closed.
+2022-09-29 22:43:23.8210 Info Message Template Auto Format enabled
+2022-09-29 22:43:23.8419 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-29 22:43:23.9142 Info Adding target FileTarget(Name=logData)
+2022-09-29 22:43:23.9825 Info Validating config: TargetNames=logData, ConfigItems=15, FilePath=C:\BooksAPI\bin\Debug\net6.0\nlog.config
+2022-09-29 22:49:25.1941 Info Shutdown() called. Logger closing...
+2022-09-29 22:49:25.1941 Info Closing old configuration.
+2022-09-29 22:49:25.2206 Info Logger has been closed down.
+2022-09-29 22:49:33.2371 Info Message Template Auto Format enabled
+2022-09-29 22:49:33.2874 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-29 22:49:33.3329 Info Adding target FileTarget(Name=logData)
+2022-09-29 22:49:33.3329 Info Adding target FileTarget(Name=appData)
+2022-09-29 22:49:33.3831 Info Validating config: TargetNames=logData, appData, ConfigItems=29, FilePath=C:\BooksAPI\bin\Debug\net6.0\nlog.config
+2022-09-29 22:50:17.6774 Info Shutdown() called. Logger closing...
+2022-09-29 22:50:17.7044 Info Closing old configuration.
+2022-09-29 22:50:17.7280 Info Logger has been closed down.
+2022-09-29 22:50:49.4786 Info Message Template Auto Format enabled
+2022-09-29 22:50:49.4944 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-29 22:50:49.5383 Info Adding target FileTarget(Name=logData)
+2022-09-29 22:50:49.5383 Info Adding target FileTarget(Name=appData)
+2022-09-29 22:50:49.6000 Info Validating config: TargetNames=logData, appData, ConfigItems=29, FilePath=C:\BooksAPI\bin\Debug\net6.0\nlog.config
