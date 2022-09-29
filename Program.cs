@@ -1,40 +1,35 @@
-using Microsoft.EntityFrameworkCore;
-using BooksAPI.Data;
+using System;
+using Microsoft.Extensions.Configuration;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-builder.Services.AddDbContext<AppDbContext>(options => 
-        options.UseSqlServer(builder.Configuration.GetConnectionString("connectionString")));
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+namespace BooksAPI
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            try
+            {
+                var configuration = new ConfigurationBuilder()
+                                    .AddJsonFile("appSettings.json")
+                                    .Build();
+
+                // TODO : Implement loging
+
+                CreateHostBuilder(args).Build().Run();
+            }
+
+            finally 
+            {
+
+            }
+        }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) => 
+                        Host.CreateDefaultBuilder(args)
+                        .ConfigureWebHostDefaults(webBuilder => 
+                        {
+                            webBuilder.UseStartup<Startup>();
+                        });
+                        
+    }
 }
-
-app.UseHttpsRedirection();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-// app.UseEndpoints(endpoints => 
-// {
-//     endpoints.MapControllers();
-// });
-
-AppDbInitializer.Seed(app);
-
-app.Run();
