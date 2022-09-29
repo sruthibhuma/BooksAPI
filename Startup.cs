@@ -1,6 +1,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using BooksAPI.Data;
+using BooksAPI.Services;
 
 namespace BooksAPI
 {
@@ -27,8 +28,8 @@ namespace BooksAPI
                 options.UseSqlServer(ConnectionString));
             
             //Configure Services 
-           //TODO: services.AddTransient<BooksService>();
-           services.AddSwaggerGen();
+            services.AddTransient<BooksService>();
+            services.AddSwaggerGen();
         //    services.AddSwaggerGen( c =>
         //     {
         //         c.SwaggerDoc("v1", new OpenApiInfo { Title = "BooksAPI", Version = "v1" });

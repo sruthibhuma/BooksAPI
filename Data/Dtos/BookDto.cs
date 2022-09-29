@@ -1,10 +1,8 @@
 using System;
 
-namespace BooksAPI.Data.Models{
+namespace BooksAPI.Data.Dtos{
 
-    public class Book {
-
-        public int Id { get; set; }
+    public class BookDto {
         public string Name { get; set;}
         public string Author { get; set; }
 
