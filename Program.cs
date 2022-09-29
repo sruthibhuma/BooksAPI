@@ -24,8 +24,17 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseRouting();
+
 app.UseAuthorization();
 
 app.MapControllers();
+
+// app.UseEndpoints(endpoints => 
+// {
+//     endpoints.MapControllers();
+// });
+
+AppDbInitializer.Seed(app);
 
 app.Run();
