@@ -1,0 +1,5 @@
+2022-09-29 16:40:12.2744 Info Message Template Auto Format enabled
+2022-09-29 16:40:12.3111 Info Loading assembly: NLog.Web.AspNetCore
+2022-09-29 16:40:12.3956 Info Adding target FileTarget(Name=logData)
+2022-09-29 16:40:12.4928 Info Validating config: TargetNames=logData, ConfigItems=15, FilePath=C:\BooksAPI\bin\Debug\net6.0\nlog.config
+2022-09-29 16:40:17.7645 Info Validating config: TargetNames=logData, ConfigItems=15, FilePath=C:\BooksAPI\bin\Debug\net6.0\nlog.config

@@ -3,7 +3,7 @@ using BooksAPI.Data;
 using BooksAPI.Data.Models;
 using BooksAPI.Data.Dtos;
 
-namespace BooksAPI.Services
+namespace BooksAPI.Data.Services
 {
     public class BooksService
     {
