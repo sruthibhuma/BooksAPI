@@ -20,7 +20,6 @@ namespace BooksAPI
             catch(Exception ex)
             {
                 logger.Error(ex, "Error in Main Method");
-                throw ex;
             }
 
             finally 
@@ -33,8 +32,7 @@ namespace BooksAPI
                         Host.CreateDefaultBuilder(args)
                         .ConfigureWebHostDefaults(webBuilder => 
                         {
-                            webBuilder.UseStartup<Startup>()
-                            .UseNLog();
+                            webBuilder.UseStartup<Startup>();
                         });
                         
     }

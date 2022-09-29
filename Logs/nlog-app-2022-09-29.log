@@ -1,0 +1,2 @@
+2022-09-29 22:50:49.6475|DEBUG|BooksAPI.Program|Inside Main method
+2022-09-29 22:51:40.9544|DEBUG|BooksAPI.Data.Services.BooksService|Getting a book by Id
