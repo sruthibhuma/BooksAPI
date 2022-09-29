@@ -29,4 +29,41 @@ public class BooksController : ControllerBase
         var book = _dbContext.Books.FirstOrDefault(book => book.Id == bookId);
         return Ok(book);
     }
+
+        
+    [HttpPost("AddBook")]
+    public  IActionResult AddBook([FromBody] Book book)
+    {
+        var _book = new Book() { Name = book.Name, Author = book.Author };
+        _dbContext.Books.Add(_book);
+        _dbContext.SaveChanges();
+        return Ok();
+    }
+
+    [HttpPut("UpdateBook/{bookId}")]
+    public  IActionResult UpdateBook(int bookId, [FromBody] Book book)
+    {
+        var _book = _dbContext.Books.FirstOrDefault(b => b.Id == book.Id);
+        if(_book != null){
+            _book.Name = book.Name;
+            _book.Author = book.Author;
+
+            _dbContext.SaveChanges();
+        }
+        
+        return Ok(_book);
+    }
+
+    [HttpDelete("Delete/{bookId}")]
+     public IActionResult Delete(int bookId)
+     {
+         var _book = _dbContext.Books.FirstOrDefault(b => b.Id == bookId);
+        if(_book != null){
+            
+            _dbContext.Books.Remove(_book);
+            _dbContext.SaveChanges();
+        }
+
+        return Ok();
+     }
 }
