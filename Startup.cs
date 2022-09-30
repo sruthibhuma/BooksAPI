@@ -4,7 +4,8 @@ using BooksAPI.Data;
 using BooksAPI.Data.Services;
 using Microsoft.OpenApi.Models;
 using NLog.Web;
-
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Microsoft.Data.SqlClient;
 
 namespace BooksAPI
 {
@@ -40,6 +41,21 @@ namespace BooksAPI
             services.AddLogging(loggingBuilder => {loggingBuilder.AddNLog("nlog.config");
             });
 
+            //adding health check services to container
+            services.AddHealthChecks()
+             //.AddDbContextCheck<AppDbContext>()
+             .AddCheck("sql", () => {  //TODO: Move to a separate class
+                using(var connection = new SqlConnection(ConnectionString)) {  
+                try {  
+                    connection.Open();  
+                } catch (SqlException) {  
+                    return HealthCheckResult.Unhealthy();  
+                }  
+            }  
+                return HealthCheckResult.Healthy();  
+            });
+
+
         }
 
 
@@ -61,10 +77,7 @@ namespace BooksAPI
             app.UseAuthentication();
             app.UseAuthorization();
 
-            //Exception Handling
-           // app.ConfigureBuildInExceptionHandler(loggerFactory);
-            //app.ConfigureCustomExceptionHandler();
-
+            app.UseHealthChecks("/Health");
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

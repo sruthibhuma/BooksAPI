@@ -47,7 +47,7 @@ public class BooksController : ControllerBase
              return BadRequest("Invalid Data");
         int createdBookId = _booksService.AddBook(book);
              
-        return Created("api/AddBook/{createdBookId}", book);
+        return Created($"api/AddBook/{createdBookId}", book);
     }
 
     [HttpPut("UpdateBook/{bookId}")]
