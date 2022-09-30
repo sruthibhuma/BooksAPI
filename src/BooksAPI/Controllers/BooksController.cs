@@ -11,12 +11,12 @@ namespace BooksAPI.Controllers;
 public class BooksController : ControllerBase
 {
 
-    private BooksService _booksService;
+    private readonly BooksService _booksService;
     
     
         public BooksController(BooksService booksService)
         {
-            _booksService = booksService;
+           _booksService = booksService;
         }
 
    
@@ -47,7 +47,7 @@ public class BooksController : ControllerBase
              return BadRequest("Invalid Data");
         int createdBookId = _booksService.AddBook(book);
              
-        return Created($"api/AddBook/{createdBookId}", book);
+        return Created($"api/Books/AddBook/{createdBookId}", book);
     }
 
     [HttpPut("UpdateBook/{bookId}")]

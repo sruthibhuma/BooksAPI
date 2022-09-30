@@ -1,0 +1,20 @@
+2022-09-30 16:36:04.5474|DEBUG|BooksAPI.Program|Inside Main method
+2022-09-30 16:36:30.4261|DEBUG|BooksAPI.Data.Services.BooksService|Getting a book by Id
+2022-09-30 16:36:54.5694|INFO|BooksAPI.Data.Services.BooksService|Test Book : 0 : automapper- sruthi
+2022-09-30 16:36:54.5694|INFO|BooksAPI.Data.Services.BooksService|Test Book : 0 : automapper- sruthi
+2022-09-30 16:36:55.0623|INFO|BooksAPI.Data.Services.BooksService|Book is Created
+2022-09-30 16:42:40.0480|DEBUG|BooksAPI.Program|Inside Main method
+2022-09-30 16:44:25.2815|INFO|BooksAPI.Data.Services.BooksService|test book :0:test book -automapper
+2022-09-30 16:44:25.2815|INFO|BooksAPI.Data.Services.BooksService|updated book :6:test book -automapper
+2022-09-30 16:44:25.5351|INFO|BooksAPI.Data.Services.BooksService|Book is Updated
+2022-09-30 16:48:05.4420|DEBUG|BooksAPI.Program|Inside Main method
+2022-09-30 16:49:04.6318|INFO|BooksAPI.Data.Services.BooksService|0.auto mapper test-sruthi
+2022-09-30 16:49:04.6708|INFO|BooksAPI.Data.Services.BooksService|Book is Updated
+2022-09-30 16:49:53.4827|DEBUG|BooksAPI.Data.Services.BooksService|Getting a book by Id
+2022-09-30 17:09:04.3112|DEBUG|BooksAPI.Program|Inside Main method
+2022-09-30 17:10:44.1339|INFO|BooksAPI.Data.Services.BooksService|Book is Created
+2022-09-30 17:11:39.1695|DEBUG|BooksAPI.Data.Services.BooksService|Getting a book by Id
+2022-09-30 17:12:11.7348|INFO|BooksAPI.Data.Services.BooksService|Book is Updated
+2022-09-30 17:12:25.1658|DEBUG|BooksAPI.Data.Services.BooksService|Getting a book by Id
+2022-09-30 23:41:37.5952|DEBUG|BooksAPI.Program|Inside Main method
+2022-09-30 23:45:35.4044|DEBUG|BooksAPI.Program|Inside Main method
