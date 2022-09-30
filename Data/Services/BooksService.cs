@@ -28,22 +28,36 @@ namespace BooksAPI.Data.Services
         public int AddBook(BookDto book)
         {
             var _book = new Book() { Name = book.Name, Author = book.Author };
+
+            try {
             _context.Books.Add(_book);
             _context.SaveChanges();
-            _logger.Log(LogLevel.Information, "Book is Created");
+            _logger.Log(LogLevel.Information, "Book is Created");    
+            }
+            catch (Exception ex)
+            {
+                _logger.Log(LogLevel.Error, ex, "Error in adding a book");
+            }
             return _book.Id;
         }
 
         public Book UpdateBook(int bookId, BookDto book)
         {
             var _book = _context.Books.FirstOrDefault(n => n.Id == bookId);
+            try 
+            {
             if(_book != null)
             {
                 _book.Name = book.Name;
                 _book.Author = book.Author;
                 _context.SaveChanges();
-
+                _logger.Log(LogLevel.Information, "Book is Updated"); 
                 return _book;
+            }
+            }
+            catch (Exception ex)
+            {
+                _logger.Log(LogLevel.Error, ex, "Error in updating the book"); 
             }
             return null;
         }
