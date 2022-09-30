@@ -6,6 +6,9 @@ using Microsoft.OpenApi.Models;
 using NLog.Web;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Data.SqlClient;
+using AutoMapper;
+using BooksAPI.Handlers;
+
 
 namespace BooksAPI
 {
@@ -33,6 +36,7 @@ namespace BooksAPI
             
             //Configure Services 
             services.AddTransient<BooksService>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });                
@@ -40,6 +44,11 @@ namespace BooksAPI
             
             services.AddLogging(loggingBuilder => {loggingBuilder.AddNLog("nlog.config");
             });
+
+            var autoMapper = new MapperConfiguration(item => item.AddProfile(new AutoMapperHandler()));
+            IMapper mapper = autoMapper.CreateMapper();
+            services.AddSingleton(mapper);
+
 
             //adding health check services to container
             services.AddHealthChecks()
