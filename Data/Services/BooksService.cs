@@ -2,33 +2,37 @@ using System;
 using BooksAPI.Data;
 using BooksAPI.Data.Models;
 using BooksAPI.Data.Dtos;
-using Microsoft.Extensions.Logging;
+using AutoMapper;
 
 namespace BooksAPI.Data.Services
 {
     public class BooksService
     {
-        private AppDbContext _context;
+        private readonly AppDbContext _context;
         private readonly ILogger<BooksService> _logger;
+        private readonly IMapper _mapper;
 
-        public BooksService(AppDbContext context, ILogger<BooksService> logger)
+        public BooksService(AppDbContext context, ILogger<BooksService> logger, IMapper mapper)
         {
             _context = context;
             _logger = logger;
+            _mapper = mapper;
         }
 
         public List<Book> GetAllBooks() => _context.Books.ToList();
-        public Book GetBookById(int bookId) 
+        public BookDto GetBookById(int bookId) 
         {
             _logger.Log(LogLevel.Debug, "Getting a book by Id");
             var _book = _context.Books.FirstOrDefault(book => book.Id == bookId);
-            return _book;
+            var _bookDto = _mapper.Map<Book,BookDto>(_book);
+            
+            return _bookDto;
         }
 
         public int AddBook(BookDto book)
         {
-            var _book = new Book() { Name = book.Name, Author = book.Author };
-
+            var _book = _mapper.Map<BookDto,Book>(book); 
+           
             try {
             _context.Books.Add(_book);
             _context.SaveChanges();
@@ -44,6 +48,7 @@ namespace BooksAPI.Data.Services
         public Book UpdateBook(int bookId, BookDto book)
         {
             var _book = _context.Books.FirstOrDefault(n => n.Id == bookId);
+            
             try 
             {
             if(_book != null)
