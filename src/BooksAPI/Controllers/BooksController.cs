@@ -26,7 +26,7 @@ public class BooksController : ControllerBase
          
          var allBooks = _booksService.GetAllBooks();
          if(allBooks.Count() == 0)
-            return NotFound();
+            return NoContent();
          return Ok(allBooks);
      }
 
